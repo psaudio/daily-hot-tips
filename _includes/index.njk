@@ -1,0 +1,12 @@
+---
+pagination:
+  data: collections.posts
+  size: 10
+  alias: posts
+---
+<ul>
+{% for post in posts %}
+  <li><a href="{{ post.url }}">{{ post.data.title }}</a> ({{ post.date.toDateString() }})</li>
+{% endfor %}
+</ul>
+<a href="/feed.xml">RSS Feed</a>
